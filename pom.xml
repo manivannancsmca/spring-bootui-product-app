@@ -11,7 +11,7 @@
 	<groupId>com.spring-bootui</groupId>
 	<artifactId>spring-bootui-product-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
+	<name>product-app</name>
 	<description>Enterprise Product Management Application with BootUI</description>
 	<url/>
 	<licenses>
