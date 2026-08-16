@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,10 @@ import com.bootui.product.app.dto.response.ProductResponse;
 import com.bootui.product.app.service.ProductService;
 
 @RestController
-@RequestMapping("/api/v1/products")
+@RequestMapping(
+        value = "/api/v1/products",
+        produces = MediaType.APPLICATION_JSON_VALUE
+)
 @RequiredArgsConstructor
 @Validated
 public class ProductController {
