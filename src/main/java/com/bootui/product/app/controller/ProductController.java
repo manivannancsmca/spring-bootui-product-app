@@ -56,7 +56,10 @@ public class ProductController {
         return ResponseEntity.ok(ApiResponse.success(responses));
     }
 
-    @PutMapping("/{id}")
+     @PutMapping(
+            value = "/{id}",
+            consumes = MediaType.APPLICATION_JSON_VALUE
+    )
     public ResponseEntity<ApiResponse<ProductResponse>> updateProduct(
             @PathVariable Long id,
             @Valid @RequestBody ProductRequest request) {
