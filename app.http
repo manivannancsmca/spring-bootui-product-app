@@ -1,0 +1,42 @@
+### Create Product
+POST http://localhost:8080/api/v1/products
+Content-Type: application/json
+
+{
+  "name": "Samsung Galaxy S24",
+  "description": "Flagship Android",
+  "price": 899.99,
+  "quantity": 60,
+  "category": "Electronics",
+  "sku": "SAM-S24-001"
+}
+
+
+### Get Product by ID
+GET http://localhost:8080/api/v1/products/1
+
+
+### Get Paginated Products
+GET http://localhost:8080/api/v1/products?page=0&size=5&sort=price,desc
+
+
+### Get Products by Category
+GET http://localhost:8080/api/v1/products/category/Electronics
+
+
+### Update Product
+PUT http://localhost:8080/api/v1/products/1
+Content-Type: application/json
+
+{
+  "name": "Samsung Galaxy S24 Ultra",
+  "description": "Updated",
+  "price": 1199.99,
+  "quantity": 50,
+  "category": "Electronics",
+  "sku": "SAM-S24-001"
+}
+
+
+### Delete Product
+DELETE http://localhost:8080/api/v1/products/5
